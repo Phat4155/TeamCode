@@ -9,6 +9,8 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Hardware;
 import org.firstinspires.ftc.robotcore.external.Func;
+import org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive;
+
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.util.Range;
@@ -44,7 +46,7 @@ public class MainTeleOp2 extends LinearOpMode {
         Gecko = hardwareMap.get(DcMotor.class, "Gek");
         Gecko.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        org.firstinspires.ftc.teamcode.Roadrunner_QuickStart.drive.SampleMecanumDrive drive = new org.firstinspires.ftc.teamcode.Roadrunner_QuickStart.drive.SampleMecanumDrive(hardwareMap);
+        SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
 
         drive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
